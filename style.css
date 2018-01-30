@@ -20,8 +20,11 @@
 	height:400px;
 }
 
-#Note {
+textarea {
 	margin: 0px; 
 	width: 600px; 
 	height: 150px;
+	background-color: #489ef7;
+	resize: none;
+
 }
