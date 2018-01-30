@@ -1,7 +1,13 @@
+#main {
+	margin: 0 auto;
+	height: 800px;
+	width: 800px;
+	background: #489ef7;;
+}
+
 #left {
 	width:400px;
 	height:400px;
-	background: #fc0; 
 }
 
 #center {
@@ -12,4 +18,10 @@
 #right {
 	width:400px;
 	height:400px;
+}
+
+#Note {
+	margin: 0px; 
+	width: 600px; 
+	height: 150px;
 }
