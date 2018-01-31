@@ -2,29 +2,35 @@
 	margin: 0 auto;
 	height: 800px;
 	width: 800px;
-	background: #489ef7;;
 }
 
-#left {
-	width:400px;
-	height:400px;
-}
-
-#center {
-	width:400px;
-	height:400px;
-}
-
-#right {
-	width:400px;
-	height:400px;
+input{
+	margin: 0;
+	height: 44px;
+	width: 50%;
+	background: #fff;
+	border: 1px;
+	padding: 10px 10px 10px 10px;
+	line-height: 24px;
+	border-color: #c7c7c7;
+	border-radius: 4px;
+	border-style: solid;
+	box-sizing: border-box;
+	box-shadow: 0 0 8px 2px black;	
 }
 
 textarea {
 	margin: 0px; 
 	width: 600px; 
 	height: 150px;
-	background-color: #489ef7;
+	background: #fff;
+	border: 1px;
+	padding: 10px 10px 10px 10px;
+	line-height: 24px;
+	border-color: #c7c7c7;
+	border-radius: 4px;
+	border-style: solid;
+	box-sizing: border-box;
+	box-shadow: 0 0 8px 2px black;	
 	resize: none;
-
 }
