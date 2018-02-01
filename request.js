@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$.ajax({
 			method: "GET",
 			url: "info.php",
-			data: {name : "Juin", loc : "Santa Barbara"}
+			data: {Dbname: "linux", name : "Juin", loc : "Santa Barbara"}
 		})
 		.done(function( msg ) {
     			$('#request').html(msg);
