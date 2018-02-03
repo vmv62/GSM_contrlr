@@ -3,15 +3,18 @@ $(document).ready(function(){
   'use strict';
 
 	$('#request').click(function(){
-		var unit = $("input[name='Dbname']").val();
-		var point = $("input[name='Agent']").val();
+
 		$.ajax({
 			method: "GET",
 			url: "info.php",
-			data: {unit: unit, point: point, brokes: "NULL", fix: "NULL", note: "NULL"}
+			data: {	unit: $("input[name='unit']").val(),
+				point: $("input[name='point']").val(), 
+				brokes: $("textarea[name='brokes']").val(),
+				fix: "NULL", 
+				note: $("textarea[name='note']").val(),}
 		})
-		.done(function( msg ) {
-//    			$('#request').html(msg);
+		.done(function(data){ 
+    			$("p[name='req_answ']").html(data);
 //    			$("input[name='Agent']").val(unit);
   		});
 	});
