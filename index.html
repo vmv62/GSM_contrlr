@@ -8,14 +8,30 @@
 <body>
 <script type="text/javascript" src="request.js"></script>
 
+<div id="header">
+	<b>Primer!!</b>
+<div/>
+
 <div id="main">
 		<b>Контрагент</b>
-		<p name="req_answ">здесь должен быть ответ сервера</p>
-		<p><input type="text" name="unit"</p>
-		<p><input type="text" name="point"</p>
-		<p><textarea rows="10" cols="40" name="brokes"></textarea></p>
-		<p><textarea rows="10" cols="40" name="note"></textarea></p>
-		<button id="request">Жмакай!</button>
+		<p>Наименование организации:
+			<br>
+			<input type="text" name="Dbname">
+		</p>
+		<p>Сфера деятольности:
+			<br>
+			<input type="text" name="Agent">
+		</p>
+		<p>Поставляет:
+			<br>
+			<textarea rows="5" cols="40" name="Equipment "></textarea>
+		</p>
+		<p>Примечание
+			<br>
+			<textarea rows="5" cols="40" name="Note"></textarea>
+		</p>
+		<button id="request">Сохранить!</button>
+
 </div>
 <div id="send">Отправить</div>
 
