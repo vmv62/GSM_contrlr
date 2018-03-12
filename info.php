@@ -2,25 +2,18 @@
 	//Подключаемся к базе
 	$mysqli = new mysqli("127.0.0.1", "root", "23272829", "work");
 
-//	print($mysqli->connect_error);
-//	print_r($_GET);
-//	echo $_GET[unit];
+	mysqli_query($mysqli, 'CREATE TABLE ka(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, time TIMESTAMP, orgz TINYTEXT, vector TINYTEXT, equip TEXT, note TEXT)');
+	$row = mysqli_fetch_assoc($db_list);
 
-//	$db_list = mysqli_query($mysqli, 'SHOW TABLES');
+	print_r($row);
 
-//	$row = mysqli_fetch_assoc($db_list);
-
-//	print_r($_GET);
-
-	$query_string = "INSERT INTO parts (unit, point, brokes, fix, note) VALUES (\"$_GET[unit]\", \"$_GET[point]\", \"$_GET[brokes]\", \"$_GET[fix]\", \"$_GET[note]\")";
+	$query_string = "INSERT INTO ka (orgz, vector, equip,  note) VALUES (\"$_GET[orgz]\", \"$_GET[vector]\", \"$_GET[equip]\", \"$_GET[note]\")";
 	echo $query_string;
 	$db_list = mysqli_query($mysqli, $query_string);
 
 	if($db_list == FALSE){
 		print("Query is false!");
 	}
-//	$row = mysqli_fetch_assoc($db_list);
-//	print_r($row);
 
 	//Закрываем контекст работы с базами
 	mysqli_close($mysqli);
