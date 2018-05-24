@@ -2,28 +2,43 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="scripts/request.js"></script>
 </head>
 <body>
 
-<script type="text/javascript" src="request.js"></script>
 
 <div id="head">
-	<a>Добавить данные в БД.</a>
+        <ul>
+		<li><a href="index.html">Главная</a></li>
+                <li><a href="bd_add.html">Базы данных</a></li>
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="contact.asp">Контакты</a></li>
+                <li><a href="other.html"">Разное</a></li>
+        </ul>
 </div>
 <div id="main">
 	<div id="menu">
-		<p><a href="bd_add.html">Добавить в БД</a></p>
-		<p><a>Tapinumb</a></p>
+		<div id="db_selector">
+			<a>Выбор таблицы </a>
+			<select id="select_bd" size="3"></select>
+		</div>
+		<div id="lenta"></div>
 
-		<select id="select_bd"></select>
 	</div>
-
+	
 
 	<div id="content">
-		<a>tarabarshina. sadfjsfkljflkS WDFKASLKJALCK	JBWKJSKLS DSJSJKBAS LKJASJD kjbsj vbakjsdj djkkskndbcb sakjdud</a>
+		<div id="db_input">
+			<form action="db_work.php" id="db_s">
+				
+			</form>
+		</div>
+		
+		<div id="btn"></div>
 	</div>
 </div>
+
 
 </body>
 

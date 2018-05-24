@@ -1,22 +1,64 @@
 body {
-	background-color: #9edcfb;
+	background-color: #fff;
 	font-family: Arial;
 }
+
+a {
+	margin-left: 10px;
+}
+
+p.lenta{
+	font-size: 10px;
+	margin: 0 auto;
+}
+
+button {
+	background-color: #cedbff;
+	border: none;
+	color: black;
+	margin: 10px;
+	padding: 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #cedbff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #aec2f9;
+}
+
+select {
+	margin: 10px 10px 10px 10px;
+	width: 200px;
+}
+
 #head {
 	margin: 0 auto;
-	height: 100px;
 	width: 1000px;
 	background-color: #FFFFFF;
 }
 
-#buttons {
-	float: left;
-	margin: 60px 0px 15px 10px;
-	background-color: black;
-	height: 40px;
-	width: 120px;
-	text-align: center;
-}
 
 #main {
 	margin: 0 auto;
@@ -25,16 +67,24 @@ body {
 }
 
 #menu {
-	height: 800px;
-	width: 300px;
+	height: auto;
+	margin: 10px;
+	padding: 10px 10px 10px 10px;
+	width: 260px;
 	background-color: #FFFFFF;
 	float: left;
 }
 
 #content {
 	margin-left: 300px;
-	height: 800px;
-	width: 700px;
+	padding: 10px 10px 10px 10px;
+	height: auto;
+	width: 680px;
 	background-color: #FFFFFF;
+	border: 3px;
 }
 
+#lenta{
+	padding: 20px;
+	margine: 10px;
+}
