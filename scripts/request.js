@@ -55,6 +55,7 @@ $(document).ready(function(){
 					$("#btn_send").show();
 					$("form").html(' ');
 					arr.forEach(function(arr){
+						$("form").append(data);
 						if((arr[0] != "id") && (arr[0] != "time")){
 							$("form").append('<p>'+arr[0]+'<br><textarea type="text" name="'+arr[0]+'" cols="80" rows="4" type="text"></textarea></p>');
 						}
