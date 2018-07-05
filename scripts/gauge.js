@@ -29,6 +29,14 @@ function changeTemp(dir) {
 setInterval(function(){		//Функция для выполнения запросов через поределенный интервал.
 	$.ajax({
 		url: './scripts/proc.php', //Скрипт выдает данные для отображения
+		data:{	"dbname":"sensors",
+			"tbname":"Counter",
+			"data":{
+				"current":45,
+				"actpow":16,
+				"tactpow":100
+				}
+		 },
 		success: function(data){
 			console.log(data); 	//Вывод данных в консоль
 			changeTemp(data); 	//Вывод на график.

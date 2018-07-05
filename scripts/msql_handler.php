@@ -1,23 +1,26 @@
 <?php
+//Принимаем запрос от клиента, формируем очередь для занесения в базу.
+// INSERT INTO Counter () VALUES ();
+//строка запроса dbname=sensors&tbname=Counter
+$host = "127.0.0.1";
+$user = "root";
+$passwd = "23272829";
 
-//Запрос должен содержать название базы данных, таблицу, тип операции
-//h_name - имя хоста
-//u_name - имя пользователя
-//u_paswd - пароль пользователя
-//b_name - имя базы данных
-//t_name - имя таблици
-//c_name - комманда на выполнение
-//
-print_r($_GET);
+$keys;
+$vals;
 
-//if(($_GET[u_name] == 0) || ($_GET[u_paswd] == 0) || ($_GET[b_name] == 0)){
-
-if($_GET[u_name] == 0){
-	echo "You must specify user name, password, db name!\n";
+foreach($_GET['data'] as $key => $value){
+	$keys = $keys . ", " . $key;
+	$vals = $vals . ", " . $value;
 }
 
-$mysqli = new mysqli($_GET[h_name], $_GET[u_name], $_GET[u_paswd], $_GET[b_name]);
-
-function connect(){
-}
+$query = "INSERT INTO Counter (" . $keys . ") VALUES (" . $vals . ");";
+echo $query;
+/*
+$mysqli = new mysqli($host, $user, $passwd, $bdname);
+//Запрос на добавление данных
+$result = mysqli_query($mysqli, $query);
+//Закрываем контекст работы с базами
+mysqli_close($mysqli);
+*/
 ?>
