@@ -2,14 +2,14 @@
  google.charts.setOnLoadCallback(drawGauge);
 
 //Установка предельных значений, начала и конца желтой и красной зон.
-var gaugeOptions = {min: 0, max: 500, yellowFrom: 300, yellowTo: 400,
-	redFrom: 400, redTo: 500, minorTicks: 5};
+var gaugeOptions = {min: 0, max: 10000, yellowFrom: 7000, yellowTo: 8000,
+	redFrom: 8000, redTo: 10000, minorTicks: 5};
 var gauge;
 
 //Функция отрисовки графиков
 function drawGauge() {
 	gaugeData = new google.visualization.DataTable();
-	gaugeData.addColumn('number', 'Proc');
+	gaugeData.addColumn('number', 'WattO');
 //	gaugeData.addColumn('number', 'Torpedo');
 	gaugeData.addRows(2);
 	gaugeData.setCell(0, 0, 120);
@@ -32,9 +32,8 @@ setInterval(function(){		//Функция для выполнения запро
 		data:{	"dbname":"sensors",
 			"tbname":"Counter",
 			"data":{
-				"current":45,
-				"actpow":16,
-				"tactpow":100
+				"params":45,
+				"dbinfo":16,
 				}
 		 },
 		success: function(data){
